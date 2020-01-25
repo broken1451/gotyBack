@@ -85,7 +85,7 @@ app.post('/goty/:id', async (req, res) => {
        if (!gameSnap.exists) {
            res.status(404).json({
                ok: false,
-               mensaje: `no existe ese juegos con este id ${id}`
+               mensaje: `no existe ese juego con este id ${id}`
            });
        } else {
         const antes = gameSnap.data() || {votos: 0}; // referencia al objeto, asi estaba e juego antes y se obtiene la data
